@@ -1,16 +1,28 @@
 # Lecture 02_functions_and_arrays
 
-## 01_functions.cc
-[link to file](./01_functions.cc)
+## 01_auto.cc
 
-A function is a named sequence of statements. A function can return a result (return value).
+[link to file](./01_auto.cpp)
+
+This program introduces the `auto` specifier. When you declare a
+variable with this keyword its type will be automatically deduced by
+the compiler.
+
+PPP: chap 20.5.2
+CPL: chap 2.2.2, chap 6.3.6
+
+
+## 02_functions.cpp
+[link to file](./02_functions.cpp)
+
+A function is a named sequence of statements. A function can return a result (return value), and since c++14 can be declared as `auto`.
 
 PPP: 4.5
 
 
-## 02_overloading.cc
+## 03_overloading.cpp
 
-[link to file](./02_overloading.cc)
+[link to file](./03_overloading.cpp)
 
 This program contains an example of *function overloading*. You can give two
 functions the same name provided that they differ by the types and/or the
@@ -20,9 +32,9 @@ CPL: 12.3
 
 
 
-## 03_templates.cc
+## 04_templates.cpp
 
-[link to file](./03_templates)
+[link to file](./04_templates)
 
 This program introduces the usage of *templates* for the function of the previous
 example. The template allows the function to work with different kinds of types, thus
@@ -32,27 +44,9 @@ PPP: 19.3
 CPL: 3.4.1, 3.4.2
 
 
+## 05_static_arrays.cpp
 
-## 04_wrong_args.cc
-
-[link to file](./04_wrong_args.cc)
-
-This is an example of how arguments are passed in C++, the paradigm used is the *pass by value*.
-
-PPP: 8.5.3
-
-
-
-## 05_swaps.cc
-
-[link to file](./05_swaps.cc)
-
-How to actually swap two numbers in C++ using pointers and references. Can we do something better here?
-
-
-## 06_static_arrays.cc
-
-[link to file](./06_static_arrays.cc)
+[link to file](./05_static_arrays.cpp)
 
 Brief introduction to arrays in C++, examples of declaration and various initializations.
 There is also a demonstration of their consecutive representation in memory.
@@ -63,9 +57,9 @@ CPL: 7.3 arrays
 
 
 
-## 07_dynamic_arrays.cc
+## 06_dynamic_arrays.cpp
 
-[link to file](./07_dynamic_arrays.cc)
+[link to file](./06_dynamic_arrays.cpp)
 
 Usage of the `new` function to allocate memory on the *heap* (also called free-store or dynamic memory)
 and consequent usage of `delete` to free it.
