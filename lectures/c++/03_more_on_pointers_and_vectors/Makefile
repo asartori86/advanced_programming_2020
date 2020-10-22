@@ -34,5 +34,5 @@ clean:
 
 .PHONY: clean
 
-01_const_and_pointers.x : CXXFLAGS += -Wno-unused-variable
+01_const_and_pointers.x : CXXFLAGS += -Wno-unused-variable -Wno-unused-but-set-variable
 02_special_pointers.x : CXXFLAGS += -Wno-unused-variable -Wno-unused-but-set-variable -Wno-uninitialized
