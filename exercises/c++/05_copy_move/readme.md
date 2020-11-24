@@ -21,7 +21,7 @@ class List {
 
   // constructor(s) for List
   
-  // copy semantics
+  // copy semantics (deep copy)
   // move semantics
   
   // destructor
