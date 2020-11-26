@@ -1,12 +1,14 @@
 #include <iostream>
 
-enum month { jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec };
+enum class month { jan = 1, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec };
 
-using namespace std;
+// using namespace std;
+using std::cout;
+using std::endl;
 
 int main() {
-  cout << nov << endl;
-  // cout << dec << endl;
+  cout << month::nov << endl; 
+  cout << month::dec << endl;
 
   return 0;
 }

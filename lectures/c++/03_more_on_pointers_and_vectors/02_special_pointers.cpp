@@ -9,7 +9,7 @@ int main() {
   int a{8};
   int* pi{&a};
 
-  char** ppc;
+  char** ppc; // "array of strings"   char* ppc[];
 
   int* ap[7];
 
@@ -52,9 +52,12 @@ int main() {
     std::cout << "pi is nullptr and I CANNOT dereference it \n";
 
   // strings are special type of char[]
-  char word[]{"Hello"};
+  char word[]{"Hello"};   // 5: wrong; 6 elems
+
+  int aii[]{1,2,3,4}; // 4 elems
+  
   char word2[]{'H', 'e', 'l', 'l', 'o', 0};
-  if (strcmp(word, word2) == 0)  // word == word2 is
+  if (!strcmp(word, word2))  // word == word2 is
                                  // implementation-dependent (it might
                                  // compare the two pointers, i.e. the
                                  // two addresses of word and word2)
@@ -62,7 +65,9 @@ int main() {
   else
     std::cout << "different\n";
 
-  int (*fp)(const char*);
+  
+
+  int (*fp)(const char*);  // ret_type (*name) (args1, args2, ...)
   fp = func1;
 
   fp("hello");
@@ -70,8 +75,7 @@ int main() {
   fp = &func2;
   fp("world");
 
-  // fp = func3; // error: wrong signature
-  auto xx = func3;
+  auto xx = &func3;
 
   xx("auto");
 
