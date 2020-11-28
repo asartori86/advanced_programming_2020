@@ -15,7 +15,7 @@ void dwim(const color c) {
       std::cout << "option 3: green\n";
       break;
     default:
-      std::cerr << "unknown option\n";  // should I exit the program?
+      std::cout << "unknown option\n";  // should I exit the program?
       break;
   }
 }
@@ -23,7 +23,6 @@ void dwim(const color c) {
 int main() {
   color opt{red};
   // opt = 3; // cannot assign int to enum
-  opt = green;
   int a{opt};  // but they implicitly convert to integers
 
   dwim(opt);

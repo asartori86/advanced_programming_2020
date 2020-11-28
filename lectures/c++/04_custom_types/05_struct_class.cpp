@@ -3,9 +3,9 @@
 #include <vector>
 
 struct Point_s {
-  double x;     // member var.
+  double x;
   double y;
-  void print(); //member func.
+  void print();
 };  // note ; at the end
 
 void Point_s::print() {
@@ -17,11 +17,9 @@ class Point_c {
   double y;
 
  public:
-  
   void print() {
     std::cout << "Class. x = " << x << "; y = " << y << std::endl;
   }  // note no ; at the end
-
 };   // note ; at the end
 
 int main() {
@@ -38,7 +36,6 @@ int main() {
   Point_s* p = &ps;
   p->x = 0.0;
   p->print();
-  (*p).y = 7;
 
   auto& pr = ps;
   ++pr.x;
@@ -48,13 +45,8 @@ int main() {
   array_of_structs[0].x = 1;
   array_of_structs[0].y = 2;
 
-  Point_s* array_of_pointers[4];
-  array_of_pointers[0]=&ps;
-
-  array_of_pointers[0]->print();
-
   std::array<Point_s, 5> as;
-  3[as].x = 3;
+  as[3].x = 3;
 
   std::vector<Point_s> vs;
   vs.push_back(ps);

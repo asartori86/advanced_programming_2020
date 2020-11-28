@@ -1,7 +1,6 @@
 #include <iostream>
 
 enum class color { red, yellow, green };
-enum class led {red, orange, green, blue};
 // enum class color{red=0, yellow=1, green=2}; // equivalent
 
 void dwim(const color c) {
@@ -24,7 +23,7 @@ void dwim(const color c) {
 int main() {
   color opt{color::red};
   // opt = 3;     // cannot assign int to enum
-  // int a{opt}; // and they don't implicitly convert to integers
+  // int a = opt; // and they don't implicitly convert to integers
   int a{static_cast<int>(opt)};  // cast
   // int a {int(opt)}; //
   // int a {(int)opt}; // C-style cast

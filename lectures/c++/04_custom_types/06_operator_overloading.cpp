@@ -16,8 +16,7 @@ class Point_c {
   double x;
   double y;
 
-  friend
-  std::ostream& operator<<(std::ostream& os, const Point_c& p) { 
+  friend std::ostream& operator<<(std::ostream& os, const Point_c& p) {
     os << "Class. x = " << p.x << "; y = " << p.y << std::endl;
     return os;
   }
@@ -29,7 +28,7 @@ int main() {
   ps.x = 9.9;
   ps.y = 3. / 7;
 
-  std::cout << ps; // operator<<(std::cout, ps);
+  std::cout << ps;
 
   Point_c pc;
   // pc.x =7.6; // error

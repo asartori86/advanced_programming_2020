@@ -1,7 +1,7 @@
 #include <iomanip>
 #include <iostream>
 
-void print_ma(int* m[5], int dim1);  // ugly and not flexible
+void print_ma(int m[][5], int dim1);  // ugly and not flexible
 // void print_ma(int m[][], int dim1, int dim2); // error second
 // dimension must be
 // knwon at compile time
@@ -21,15 +21,11 @@ int main() {
     std::cout << std::endl;
   }
 
-  // return 0;
-
   for (int i = 0; i < 6; ++i) {
     for (int j = 0; j < 5; ++j)
-      std::cout << &ma[i][j] << " ";  // a matrix is one long array!!!
+      std::cout << &ma[i][j] << " ";
     std::cout << std::endl;
   }
-
-  return 0;
 
   // int *pma {ma}; 		// error
   // int *pma[5] {ma};		// error
