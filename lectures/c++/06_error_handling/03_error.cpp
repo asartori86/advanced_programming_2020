@@ -25,9 +25,9 @@ int main() {
   } catch (const Square_root_invalid& e) {
     std::cerr << e.what() << std::endl;
     return 2;
-    // } catch (const std::exception& e) {
-    //   std::cerr << e.what() << std::endl;
-    //   return 1;
+  } catch (const std::exception& e) {
+    std::cerr << e.what() << std::endl;
+    return 1;
   } catch (...) {
     std::cerr << "Unknown exception. Aborting.\n";
     return 3;

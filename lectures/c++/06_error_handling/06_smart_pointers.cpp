@@ -8,11 +8,22 @@ class Vector {
 
  public:
   Vector(const unsigned int l) : elem{new double[l]} {
-    std::cout << "Vector ctor\n";
+    // std::cout << "Vector ctor\n";
   }
-  double& operator[](const unsigned int i) noexcept {
+
+  Vector(Vector&&) noexcept = default;
+  Vector& operator=(Vector&&) noexcept = default;
+
+  double& operator[](const unsigned int i) noexcept {  // noexcept ---> better
+                                                       // code, faster code
     return elem[i];
   }  // you can use smart pointers almost like raw pointers
+
+  const double& operator[](const unsigned int i)
+      const noexcept {  // noexcept ---> better code, faster code
+    return elem[i];
+  }  // you can use smart pointers almost like raw pointers
+
   ~Vector() noexcept { std::cout << "~Vector\n"; }
 };
 
@@ -30,7 +41,7 @@ class ManyResources {
 
 int main() {
   try {
-    std::unique_ptr<int[]> up{new int[7]};
+    std::unique_ptr<int[]> up{new int[7]};  // RAII
     ManyResources mr;
 
   } catch (const std::exception& e) {

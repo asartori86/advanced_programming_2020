@@ -8,5 +8,9 @@ int main() {
   d = std::sqrt(-4);
   std::cout << d << " " << errno << std::endl;
 
+  d = 0;
+
+  errno = 0;
+
   return 0;
 }

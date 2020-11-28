@@ -22,7 +22,7 @@ class Vector {
   Vector(const unsigned int l) : elem{new double[l]} {
     std::cout << "Vector" << std::endl;
   }
-  ~Vector() noexcept {
+  ~Vector() {
     delete[] elem;
     std::cout << "~Vector" << std::endl;
   }
@@ -40,19 +40,19 @@ class ManyResources {
       AP_ERROR(false) << "Error in ManyResources ctor." << std::endl;
     } catch (...) {
       delete[] ptr;  // <----
-      throw;
+      throw;         // re-throw
     }
   }
 
-  ~ManyResources() noexcept {
-    std::cout << "Manyresources" << std::endl;
+  ~ManyResources() {
+    std::cout << "~Manyresources" << std::endl;
     delete[] ptr;  // <----
   }
 };
 
 int main() {
   Foo f;
-  int* raw_ptr = new int[7];
+  int* raw_ptr = new int[7];  // do not use raw ptr
   try {
     // int * raw_ptr=new int[7]; // wrong because raw_ptr would not be visible
     // inside the catch-clause
