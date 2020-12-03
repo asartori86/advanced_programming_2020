@@ -2,9 +2,9 @@
 
 
 
-## 00_errno.cc
+## 00_errno.cpp
 
-[link to file](./00_errno.cc)
+[link to file](./00_errno.cpp)
 
 The example shows one of the common problem with the error handling in
 the C language.  The `errno` macro can be used by any function to
@@ -16,9 +16,9 @@ CPL: 13.1.2 traditional error handling
 
 
 
-## 01_exceptions.cc
+## 01_exceptions.cpp
 
-[link to file](./01_exceptions.cc)
+[link to file](./01_exceptions.cpp)
 
 A simple square root function is implemented. In particular, it `throw`s exceptions defined by the user, in
 particular these are simple `struct`s with a name that represent the kind of error.
@@ -30,9 +30,9 @@ CPL: 13.5 throwing and catching exceptions
 
 
 
-## 02_exceptions.cc
+## 02_exceptions.cpp
 
-[link to file](./02_exceptions.cc)
+[link to file](./02_exceptions.cpp)
 
 Same example as before, but now the exception is a `struct` that contains the message to be
 printed.
@@ -40,9 +40,9 @@ printed.
 
 
 
-## 03_error.cc
+## 03_error.cpp
 
-[link to file](./03_error.cc)
+[link to file](./03_error.cpp)
 
 Again the same example of the square root function, but this time the [ap_error.h](./ap_error.h)
 header file is used.
@@ -50,9 +50,9 @@ We can see the behaviour of the `AP_ERROR()` macro, and that of several other ma
 
 
 
-## 04_assert.cc
+## 04_assert.cpp
 
-[link to file](./04_assert.cc)
+[link to file](./04_assert.cpp)
 
 The `assert` is a macro derived from the C language and it's contained in *assert.h*.
 It calls the `abort()` function, thus terminating the program, if the condition is false. The main feature of the `assert`s with respect to an hard-coded `if` statement is that the `assert`s can be "turned off" through the compile flag `-DNDEBUG`.
@@ -62,11 +62,11 @@ CPL: chap 13.4 assert macro
 
 
 
-## 05_stack_unwinding.cc
+## 05_stack_unwinding.cpp
 
-[link to file](./05_stack_unwinding.cc)
+[link to file](./05_stack_unwinding.cpp)
 
-The program demonstrates how the *stack unwinding* is performed. In particular, is worth noting that the destructor of an object is called if and only if its constructor ended successfully.
+The program demonstrates how the *stack unwinding* is performed. In particular, is worth noting that the destructor of an object is called if and only if its constructor ended sucppessfully.
 
 CPL: chap 13.5
 
@@ -75,9 +75,9 @@ CPL: chap 13.5
 
 
 
-## 06_smart_pointers.cc
+## 06_smart_pointers.cpp
 
-[link to file](./06_smart_pointers.cc)
+[link to file](./06_smart_pointers.cpp)
 
 This program introduces you to the usage of *smart pointers*, defined in the
 *memory* header. The `unique_ptr` is able to manage by himself the memory he holds,
